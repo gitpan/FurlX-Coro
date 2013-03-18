@@ -22,13 +22,27 @@
       ]
    },
    "prereqs" : {
+      "build" : {
+         "requires" : {
+            "Module::Build::Pluggable::CPANfile" : "0.02",
+            "Module::Build::Pluggable::GithubMeta" : "0",
+            "Test::More" : "0.98",
+            "Test::Requires" : "0.06"
+         }
+      },
       "configure" : {
          "requires" : {
-            "Module::Build" : "0.40"
+            "Module::Build" : "0.40",
+            "Module::Build::Pluggable" : "0",
+            "Module::Build::Pluggable::CPANfile" : "0.02",
+            "Module::Build::Pluggable::GithubMeta" : "0"
          }
       },
       "runtime" : {
          "requires" : {
+            "Coro" : "0",
+            "Furl" : "0",
+            "parent" : "0",
             "perl" : "5.008001"
          }
       }
@@ -36,7 +50,7 @@
    "provides" : {
       "FurlX::Coro" : {
          "file" : "lib/FurlX/Coro.pm",
-         "version" : "1.00"
+         "version" : "1.01"
       },
       "FurlX::Coro::HTTP" : {
          "file" : "lib/FurlX/Coro/HTTP.pm",
@@ -45,9 +59,13 @@
    },
    "release_status" : "stable",
    "resources" : {
+      "homepage" : "https://github.com/gfx/p5-FurlX-Coro/tree",
       "license" : [
          "http://dev.perl.org/licenses/"
-      ]
+      ],
+      "repository" : {
+         "url" : "git://github.com/gfx/p5-FurlX-Coro.git"
+      }
    },
-   "version" : "1.00"
+   "version" : "1.01"
 }

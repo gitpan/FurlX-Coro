@@ -2,9 +2,16 @@
 abstract: 'Multiple HTTP requests with Coro'
 author:
   - 'Fuji, Goro (gfx) E<lt>gfuji@cpan.orgE<gt>'
-build_requires: {}
+build_requires:
+  Module::Build::Pluggable::CPANfile: 0.02
+  Module::Build::Pluggable::GithubMeta: 0
+  Test::More: 0.98
+  Test::Requires: 0.06
 configure_requires:
   Module::Build: 0.40
+  Module::Build::Pluggable: 0
+  Module::Build::Pluggable::CPANfile: 0.02
+  Module::Build::Pluggable::GithubMeta: 0
 dynamic_config: 0
 generated_by: 'Module::Build version 0.4003, CPAN::Meta::Converter version 2.120921'
 license: perl
@@ -21,12 +28,17 @@ no_index:
 provides:
   FurlX::Coro:
     file: lib/FurlX/Coro.pm
-    version: 1.00
+    version: 1.01
   FurlX::Coro::HTTP:
     file: lib/FurlX/Coro/HTTP.pm
     version: 0
 requires:
+  Coro: 0
+  Furl: 0
+  parent: 0
   perl: 5.008001
 resources:
+  homepage: https://github.com/gfx/p5-FurlX-Coro/tree
   license: http://dev.perl.org/licenses/
-version: 1.00
+  repository: git://github.com/gfx/p5-FurlX-Coro.git
+version: 1.01
