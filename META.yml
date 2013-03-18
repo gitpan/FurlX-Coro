@@ -1,20 +1,16 @@
 ---
 abstract: 'Multiple HTTP requests with Coro'
 author:
-  - 'Fuji, Goro (gfx) <gfuji@cpan.org>'
-build_requires:
-  ExtUtils::MakeMaker: 6.42
-  Test::More: 0.88
-  Test::Requires: 0.06
+  - 'Fuji, Goro (gfx) E<lt>gfuji@cpan.orgE<gt>'
+build_requires: {}
 configure_requires:
-  ExtUtils::MakeMaker: 6.42
-distribution_type: module
-generated_by: 'Module::Install version 1.01'
+  Module::Build: 0.40
+dynamic_config: 0
+generated_by: 'Module::Build version 0.4003, CPAN::Meta::Converter version 2.120921'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: 1.4
-module_name: FurlX::Coro
 name: FurlX-Coro
 no_index:
   directory:
@@ -22,12 +18,15 @@ no_index:
     - inc
     - t
     - xt
+provides:
+  FurlX::Coro:
+    file: lib/FurlX/Coro.pm
+    version: 1.00
+  FurlX::Coro::HTTP:
+    file: lib/FurlX/Coro/HTTP.pm
+    version: 0
 requires:
-  Coro: 0
-  Furl: 0
-  parent: 0
-  perl: 5.8.1
+  perl: 5.008001
 resources:
   license: http://dev.perl.org/licenses/
-  repository: origin
-version: 0.01
+version: 1.00

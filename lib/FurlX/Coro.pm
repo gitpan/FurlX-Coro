@@ -3,9 +3,10 @@ use 5.008_001;
 use strict;
 use warnings;
 
-our $VERSION = '0.01';
+our $VERSION = '1.00';
 
-use parent qw(Furl Exporter);
+use parent qw(Furl);
+use Furl::HTTP;
 use FurlX::Coro::HTTP;
 
 sub new {
@@ -25,7 +26,7 @@ FurlX::Coro - Multiple HTTP requests with Coro
 
 =head1 VERSION
 
-This document describes FurlX::Coro version 0.01.
+This document describes FurlX::Coro version 1.00.
 
 =head1 SYNOPSIS
 
@@ -50,8 +51,6 @@ This document describes FurlX::Coro version 0.01.
 =head1 DESCRIPTION
 
 This is a wrapper to C<Furl> for asynchronous HTTP requests with C<Coro>.
-
-This is an experimental module!
 
 =head1 INTERFACE
 
