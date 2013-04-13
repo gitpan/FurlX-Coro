@@ -1,13 +1,11 @@
 {
    "abstract" : "Multiple HTTP requests with Coro",
    "author" : [
-      "Fuji, Goro (gfx) E<lt>gfuji@cpan.orgE<gt>"
+      "Fuji, Goro (gfx) <gfuji@cpan.org>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Module::Build version 0.4003, CPAN::Meta::Converter version 2.120921",
-   "license" : [
-      "perl_5"
-   ],
+   "generated_by" : "Minilla/v0.0.53",
+   "license" : "perl_5",
    "meta-spec" : {
       "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
       "version" : "2"
@@ -15,27 +13,33 @@
    "name" : "FurlX-Coro",
    "no_index" : {
       "directory" : [
-         "example",
-         "inc",
          "t",
-         "xt"
+         "xt",
+         "inc",
+         "share",
+         "eg",
+         "examples",
+         "author"
       ]
    },
    "prereqs" : {
-      "build" : {
-         "requires" : {
-            "Module::Build::Pluggable::CPANfile" : "0.02",
-            "Module::Build::Pluggable::GithubMeta" : "0",
-            "Test::More" : "0.98",
-            "Test::Requires" : "0.06"
-         }
-      },
       "configure" : {
          "requires" : {
-            "Module::Build" : "0.40",
+            "CPAN::Meta" : "0",
+            "CPAN::Meta::Prereqs" : "0",
+            "Module::Build" : "0.38",
             "Module::Build::Pluggable" : "0",
-            "Module::Build::Pluggable::CPANfile" : "0.02",
+            "Module::Build::Pluggable::CPANfile" : "0",
             "Module::Build::Pluggable::GithubMeta" : "0"
+         }
+      },
+      "develop" : {
+         "requires" : {
+            "Pod::Wordlist::hanekomu" : "0",
+            "Test::CPAN::Meta" : "0",
+            "Test::MinimumVersion" : "0.10108",
+            "Test::Pod" : "1.41",
+            "Test::Spelling" : "0"
          }
       },
       "runtime" : {
@@ -45,27 +49,37 @@
             "parent" : "0",
             "perl" : "5.008001"
          }
+      },
+      "test" : {
+         "requires" : {
+            "Test::More" : "0.98",
+            "Test::Requires" : "0.06"
+         }
       }
    },
    "provides" : {
       "FurlX::Coro" : {
          "file" : "lib/FurlX/Coro.pm",
-         "version" : "1.01"
+         "version" : "1.02"
       },
       "FurlX::Coro::HTTP" : {
-         "file" : "lib/FurlX/Coro/HTTP.pm",
-         "version" : 0
+         "file" : "lib/FurlX/Coro/HTTP.pm"
       }
    },
    "release_status" : "stable",
    "resources" : {
-      "homepage" : "https://github.com/gfx/p5-FurlX-Coro/tree",
-      "license" : [
-         "http://dev.perl.org/licenses/"
-      ],
+      "bugtracker" : {
+         "web" : "https://github.com/gfx/p5-FurlX-Coro/issues"
+      },
+      "homepage" : "https://github.com/gfx/p5-FurlX-Coro",
       "repository" : {
-         "url" : "git://github.com/gfx/p5-FurlX-Coro.git"
+         "url" : "git://github.com/gfx/p5-FurlX-Coro.git",
+         "web" : "https://github.com/gfx/p5-FurlX-Coro"
       }
    },
-   "version" : "1.01"
+   "version" : "1.02",
+   "x_contributors" : [
+      "tokuhirom <tokuhirom@gmail.com>",
+      "Fuji, Goro <g.psy.va@gmail.com>"
+   ]
 }

@@ -1,34 +1,12 @@
-package FurlX::Coro;
-use 5.008_001;
-use strict;
-use warnings;
-
-our $VERSION = '1.02';
-
-use parent qw(Furl);
-use Furl::HTTP;
-use FurlX::Coro::HTTP;
-
-sub new {
-    my $class = shift;
-    my $ua    = FurlX::Coro::HTTP->new(
-        header_format => Furl::HTTP::HEADERS_AS_HASHREF(),
-        @_);
-    return bless \$ua, $class;
-}
-
-1;
-__END__
-
-=head1 NAME
+# NAME
 
 FurlX::Coro - Multiple HTTP requests with Coro
 
-=head1 VERSION
+# VERSION
 
-This document describes FurlX::Coro version 1.02.
+This document describes FurlX::Coro version 1.01.
 
-=head1 SYNOPSIS
+# SYNOPSIS
 
     use strict;
     use warnings;
@@ -48,39 +26,37 @@ This document describes FurlX::Coro version 1.02.
 
     $_->join for @coros;
 
-=head1 DESCRIPTION
+# DESCRIPTION
 
-This is a wrapper to C<Furl> for asynchronous HTTP requests with C<Coro>.
+This is a wrapper to `Furl` for asynchronous HTTP requests with `Coro`.
 
-=head1 INTERFACE
+# INTERFACE
 
-Interface is the same as C<Furl>.
+Interface is the same as `Furl`.
 
-=head1 DEPENDENCIES
+# DEPENDENCIES
 
 Perl 5.8.1 or later.
 
-=head1 BUGS
+# BUGS
 
 All complex software has bugs lurking in it, and this module is no
 exception. If you find a bug please either email me, or add the bug
 to cpan-RT.
 
-=head1 SEE ALSO
+# SEE ALSO
 
-L<Furl>
+[Furl](http://search.cpan.org/perldoc?Furl)
 
-L<Coro>
+[Coro](http://search.cpan.org/perldoc?Coro)
 
-=head1 AUTHOR
+# AUTHOR
 
-Fuji, Goro (gfx) E<lt>gfuji@cpan.orgE<gt>
+Fuji, Goro (gfx) <gfuji@cpan.org>
 
-=head1 LICENSE AND COPYRIGHT
+# LICENSE AND COPYRIGHT
 
 Copyright (c) 2011, Fuji, Goro (gfx). All rights reserved.
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.
-
-=cut
